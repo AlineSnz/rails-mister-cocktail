@@ -1,0 +1,23 @@
+<h1>Coke tells...:)</h1>
+<h4><%= link_to "new taste to share", new_cocktail_path%></h4>
+
+<row class="main-info">
+<ul>
+<% @cocktails.each do |cocktail|%>
+  <li>
+  <%= cocktail.name %>
+  </li>
+  <li>
+  <h4>content:</h4>
+  <%= cocktail.ingredients %>
+  </li>
+<h4> <%= link_to "show", cocktail_path(cocktail) %></h4>
+<h4>update</h4>
+<% end %>
+</ul>
+</row>
+
+
+
+
+
